@@ -1,0 +1,22 @@
+.property-service-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .property-details, .owner-details {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .property-details h3, .owner-details h3 {
+    margin: 0;
+  }
+  
+  .property-details p, .owner-details p {
+    margin: 8px 0;
+  }
+  
+  /* Add more styles as needed */
+  
