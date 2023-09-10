@@ -7,18 +7,15 @@ import org.springframework.stereotype.Service;
 
 import com.pms.RealEstate.dao.BuyingDao;
 import com.pms.RealEstate.model.Buying;
+
 @Service
 public class BuyingServiceImpl implements BuyingService {
 
+	@Autowired
+	private BuyingDao buyingdao;
 
-    @Autowired
-    private BuyingDao buyingdao;
-	
 	public List<Buying> getAllBuyingProperties() {
-	    return buyingdao.findAll();
+		return buyingdao.findAll();
 	}
 
-	
-
 }
-

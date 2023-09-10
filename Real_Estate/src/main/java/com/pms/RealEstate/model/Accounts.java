@@ -1,26 +1,25 @@
 package com.pms.RealEstate.model;
 
-
 import javax.persistence.*;
 
 @Entity
 public class Accounts {
 
-    @Id
-    private String email_id;
-    private String first_name;
-    private String last_name;
-    private String password;
-    private String contact;
-    private String address;
-    private String role;
-    
+	@Id
+	private String email_id;
+	private String first_name;
+	private String last_name;
+	private String password;
+	private String contact;
+	private String address;
+	private String role;
+
 	public Accounts() {
 		super();
 	}
 
-	public Accounts(String email_id, String first_name, String last_name, String password, String contact, String address,
-			String role) {
+	public Accounts(String email_id, String first_name, String last_name, String password, String contact,
+			String address, String role) {
 		super();
 		this.email_id = email_id;
 		this.first_name = first_name;
@@ -87,14 +86,10 @@ public class Accounts {
 		this.role = role;
 	}
 
-
 	@Override
 	public String toString() {
 		return "Accounts [email_id=" + email_id + ", first_name=" + first_name + ", last_name=" + last_name
-				+ ", password=" + password + ", contact=" + contact + ", address=" + address + ", role=" + role
-				+ "]";
+				+ ", password=" + password + ", contact=" + contact + ", address=" + address + ", role=" + role + "]";
 	}
 
-    
-    
 }

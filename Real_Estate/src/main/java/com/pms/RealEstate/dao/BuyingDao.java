@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.pms.RealEstate.model.Buying;
 
 @Repository
-public interface BuyingDao extends JpaRepository<Buying,Integer> {
-   
+public interface BuyingDao extends JpaRepository<Buying, Integer> {
+
 }

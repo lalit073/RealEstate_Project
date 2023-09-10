@@ -1,0 +1,50 @@
+.property-update {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.property-update h1 {
+  margin-bottom: 20px;
+}
+
+.property-update form {
+  display: flex;
+  flex-direction: column;
+}
+
+.property-update label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.property-update input,
+.property-update select {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.property-update button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.property-update button:hover {
+  background-color: #0056b3;
+}
+
+.property-update a {
+  margin-top: 10px;
+  text-decoration: none;
+  color: #007bff;
+}

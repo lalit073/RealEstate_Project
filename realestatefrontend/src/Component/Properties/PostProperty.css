@@ -1,51 +1,63 @@
-.property-form {
-  max-width: 400px;
+/* PostProperty.css */
+
+.property-post {
+  max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-.property-form h2 {
+.property-post h1 {
   text-align: center;
   margin-bottom: 20px;
+  color: black;
 }
 
-.property-form form label {
+.property-post label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
 }
 
-.property-form form input {
+.property-post input,
+.property-post select {
   width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-.property-form form button {
-  width: 100%;
-  padding: 10px;
+.property-post .operation {
+  display: flex;
+  align-items: center;
+}
+
+.property-post button {
   background-color: #007bff;
-  color: white;
+  color: #fff;
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s;
 }
 
-.property-form form button:hover {
+.property-post button:hover {
   background-color: #0056b3;
 }
-.input-field {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  margin-bottom: 15px;
+
+.property-post a {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: #333;
+  text-decoration: none;
 }
 
-/* Add more styles as needed */
+.property-post a:hover {
+  color: #007bff;
+}

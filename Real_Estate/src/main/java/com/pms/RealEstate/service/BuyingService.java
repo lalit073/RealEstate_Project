@@ -8,5 +8,4 @@ public interface BuyingService {
 
 	public List<Buying> getAllBuyingProperties();
 
-
 }

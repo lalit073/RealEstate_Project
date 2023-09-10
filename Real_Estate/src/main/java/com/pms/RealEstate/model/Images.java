@@ -8,22 +8,20 @@ import javax.persistence.*;
 @Entity
 public class Images {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int image_id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int image_id;
 
-    @ManyToOne
-    @JoinColumn(name = "property_id")
-    private Property property;
+	@ManyToOne
+	@JoinColumn(name = "property_id")
+	private Property property;
 
-    @Lob
-    private byte[] image_1;
- 
+	@Lob
+	private byte[] image_1;
+
 	public Images() {
 		super();
 	}
-	
-	
 
 	public Images(int image_id, Property property, byte[] image_1) {
 		super();
@@ -31,8 +29,6 @@ public class Images {
 		this.property = property;
 		this.image_1 = image_1;
 	}
-
-
 
 	public int getImage_id() {
 		return image_id;
@@ -58,14 +54,10 @@ public class Images {
 		this.image_1 = image_1;
 	}
 
-
-
 	@Override
 	public String toString() {
 		return "Images [image_id=" + image_id + ", property=" + property + ", image_1=" + Arrays.toString(image_1)
 				+ "]";
 	}
 
-
-		 
 }

@@ -9,30 +9,27 @@ import javax.persistence.OneToOne;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-
 @Entity
 public class Rental {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int rental_id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int rental_id;
 
-    
-    @JsonIgnoreProperties("rental")
-    @OneToOne
-    @JoinColumn(name = "property_id")
-    private Property property;    
-    
-    private double expected_rent;
+	@JsonIgnoreProperties("rental")
+	@OneToOne
+	@JoinColumn(name = "property_id")
+	private Property property;
 
-    private double expected_deposit;
+	private double expected_rent;
 
-    private String preferred_tenants;
+	private double expected_deposit;
+
+	private String preferred_tenants;
 
 	public Rental() {
 		super();
 	}
-	
 
 	public Rental(int rental_id, Property property, double expected_rent, double expected_deposit,
 			String preferred_tenants) {
@@ -43,9 +40,6 @@ public class Rental {
 		this.expected_deposit = expected_deposit;
 		this.preferred_tenants = preferred_tenants;
 	}
-
-
-
 
 	public int getRental_id() {
 		return rental_id;
@@ -87,16 +81,10 @@ public class Rental {
 		this.preferred_tenants = preferred_tenants;
 	}
 
-
-
-
 	@Override
 	public String toString() {
-		return "Rental [rental_id=" + rental_id +  ", property=" + property
-				+ ", expected_rent=" + expected_rent + ", expected_deposit=" + expected_deposit + ", preferred_tenants="
-				+ preferred_tenants + "]";
+		return "Rental [rental_id=" + rental_id + ", property=" + property + ", expected_rent=" + expected_rent
+				+ ", expected_deposit=" + expected_deposit + ", preferred_tenants=" + preferred_tenants + "]";
 	}
 
-
-   
 }

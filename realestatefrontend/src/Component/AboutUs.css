@@ -1,0 +1,62 @@
+/* Import any fonts, if needed */
+
+/* Global styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  /* About section styles */
+  .about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+  }
+  
+  /* Team member card styles */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .team-member-card {
+    flex-basis: calc(25% - 16px);
+    margin: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  .team-member-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  .team-member-card h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+  }
+  
+  .team-member-card p {
+    color: grey;
+  }
+  
+  /* Responsive styles for smaller screens */
+  @media screen and (max-width: 650px) {
+    .team-member-card {
+      flex-basis: calc(50% - 16px);
+    }
+  }
+  

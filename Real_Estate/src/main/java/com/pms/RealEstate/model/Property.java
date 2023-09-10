@@ -5,47 +5,49 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 @Entity
 public class Property {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int property_id;
-    
-    private String property_name;
-    private String property_type;
-    private String bhk_type;
-    private double buildup_area;
-    private String furnishing_type;
-    private int floor;
-    private String listing_date;
-    private String locality;
-    private String landmark_street;
-    private String city;
-    private String state;
-    private int pincode;
-    private String description;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int property_id;
 
-    @OneToOne(mappedBy = "property", cascade = CascadeType.ALL)
-    private Rental rental;
+	private String property_name;
+	private String property_type;
+	private String bhk_type;
+	private double buildup_area;
+	private String furnishing_type;
+	private int floor;
+	private String listing_date;
+	private String locality;
+	private String landmark_street;
+	private String city;
+	private String state;
+	private int pincode;
+	private String description;
 
-    @OneToOne(mappedBy = "property", cascade = CascadeType.ALL)
-    private Buying buying;
+	@OneToOne(mappedBy = "property", cascade = CascadeType.ALL)
+	private Rental rental;
 
-    @OneToOne(mappedBy = "property", cascade = CascadeType.ALL)
-    private Images images;
-    
-    
-    
+	@OneToOne(mappedBy = "property", cascade = CascadeType.ALL)
+	private Buying buying;
+
+	@OneToOne(mappedBy = "property", cascade = CascadeType.ALL)
+	private Images images;
+
+	private String email_id;
+
 	public Property() {
 		super();
 	}
 
 	public Property(int property_id, String property_name, String property_type, String bhk_type, double buildup_area,
-			String furnishing_type, int floor, String listing_date, String locality, String landmark_street, String city,
-			String state, int pincode, String description, Rental rental, Buying buying,Images images) {
+			String furnishing_type, int floor, String listing_date, String locality, String landmark_street,
+			String city, String state, int pincode, String description, Rental rental, Buying buying, Images images,
+			String email_id) {
 		super();
 		this.property_id = property_id;
 		this.property_name = property_name;
@@ -63,7 +65,8 @@ public class Property {
 		this.description = description;
 		this.rental = rental;
 		this.buying = buying;
-		this.images=images;
+		this.images = images;
+		this.email_id = email_id;
 	}
 
 	public int getProperty_id() {
@@ -193,7 +196,7 @@ public class Property {
 	public void setBuying(Buying buying) {
 		this.buying = buying;
 	}
-    
+
 	public Images getImages() {
 		return images;
 	}
@@ -202,17 +205,13 @@ public class Property {
 		this.images = images;
 	}
 
-	@Override
-	public String toString() {
-		return "Property [property_id=" + property_id + ", property_name=" + property_name + ", property_type="
-				+ property_type + ", bhk_type=" + bhk_type + ", buildup_area=" + buildup_area + ", furnishing_type="
-				+ furnishing_type + ", floor=" + floor + ", listing_date=" + listing_date + ", locality=" + locality
-				+ ", landmark_street=" + landmark_street + ", city=" + city + ", state=" + state + ", pincode="
-				+ pincode + ", description=" + description + ", rental=" + rental + ", buying=" + buying + "]";
+	public String getEmail_id() {
+		return email_id;
 	}
 
-    
-    
-    
-    
+	public void setEmail_id(String email_id) {
+		this.email_id = email_id;
+	}
+	
+	
 }

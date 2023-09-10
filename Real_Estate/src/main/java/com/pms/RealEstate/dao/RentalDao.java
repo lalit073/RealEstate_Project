@@ -6,7 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.pms.RealEstate.model.Rental;
 
 @Repository
-public interface RentalDao extends JpaRepository<Rental,Integer>
-{
-   
+public interface RentalDao extends JpaRepository<Rental, Integer> {
+
 }
